@@ -28,17 +28,12 @@ slides @ https://github.com/phoban01/dkm-20.09.2023
 # what is the open component model?
 
 - specification for describing delivery & deployment artifacts   
-- enables bundling & automatically deployment process for any kind software
-- Software Bill of Delivery
+- enables bundling & automatic deployment process for any kind software
+- can be thought of as a **Software Bill of Delivery**
 
 ---
 
-# what is the open component model?
-
-- specification for describing delivery & deployment artifacts   
-- enables bundling & automatically deployment process for any kind software
-- can be thought of as Software Bill of Delivery (SBoD)
-
+# what does it look like?
 
 ```yaml
 # component-file.yaml
@@ -73,7 +68,7 @@ resources:
 
 ## packaging
   - specificiation (https://ocm.software/spec/) 
-  - tooling to build, sign and examine components
+  - tooling to build, sign and examine components (https://github.com/open-component-model/ocm)
 
 ## delivery
   - support for different storage contexts (filesystem, archives, OCI registry)
@@ -86,7 +81,7 @@ resources:
 
 # flux
 
-- Kubernetes native GitOps tool
+- Kubernetes native GitOps tool (https://fluxcd.io)
 - CNCF graduated project
 - first-rate support for Kustomize, Helm
 - deploy from Git, OCI or S3
@@ -95,7 +90,7 @@ resources:
 
 ---
 
-# what do we mean by airgap?
+# what do we mean by restricted environment?
 
 - access to public internet is not guarenteed
 - access to external registries is not guarenteed
@@ -103,17 +98,18 @@ resources:
 
 ---
 
-# why is ocm helpful for airgap?
+# why is ocm helpful?
 
 - ocm enables one time description of software artifacts & their deployment mechanism
 - hermitic transfer including transitive dependencies
 - tooling to support deployment when the storage context has changed
+- gitops integration enables straightforward install & seamless updates
 
 ---
 
 # demo
 
-https://github.com/open-component-model/demo-secure-delivery
+try it yourself: https://github.com/open-component-model/demo-secure-delivery
 
 two hats: software provider & software consumer
 
@@ -129,4 +125,10 @@ consumer (GitOps deployment automation):
 
 ---
 
-#
+# more info
+
+https://ocm.software
+
+https://fluxcd.io
+
+https://github.com/open-component-model
